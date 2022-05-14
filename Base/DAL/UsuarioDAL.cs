@@ -21,12 +21,12 @@ namespace DAL
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "SP_InserirUsuario";
 
-                SqlParameter pativo = new SqlParameter("@ativo", SqlDbType.Bit);
+                SqlParameter pativo = new SqlParameter("@Ativo", SqlDbType.Bit);
                 pativo.Value = _usuario.Ativo;
                 cmd.Parameters.Add(pativo);
 
                 SqlParameter pnomeUsuario = new SqlParameter("@NomeUsuario", SqlDbType.VarChar);
-                pativo.Value = _usuario.NomeUsuario;
+                pnomeUsuario.Value = _usuario.NomeUsuario;
                 cmd.Parameters.Add(pnomeUsuario);
 
 
@@ -35,7 +35,7 @@ namespace DAL
                 cmd.Parameters.Add(psenha);
 
                 SqlParameter pid = new SqlParameter("@Id", SqlDbType.Int);
-                psenha.Value = _usuario.Id;
+                pid.Value = _usuario.Id;
                 cmd.Parameters.Add(pid);
 
                 cn.Open();
