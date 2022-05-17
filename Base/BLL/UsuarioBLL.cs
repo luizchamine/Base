@@ -8,8 +8,6 @@ namespace BLL
     {
         public void Inserir(Usuario _usuario)
         {
-            
-
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             usuarioDAL.Inserir(_usuario);
         }
