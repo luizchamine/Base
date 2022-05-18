@@ -36,5 +36,36 @@ namespace UIPrincipal
         {
 
         }
+
+        private void usuarioDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void buttonSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormConsultaUsuário_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                buttonSair_Click(null, null);
+            }
+        }
+
+        private void buttonNovo_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroUsuario frm = new FormCadastroUsuario())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

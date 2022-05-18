@@ -74,7 +74,7 @@ namespace UIPrincipal
             nomeUsuarioLabel.Location = new System.Drawing.Point(66, 134);
             nomeUsuarioLabel.Name = "nomeUsuarioLabel";
             nomeUsuarioLabel.Size = new System.Drawing.Size(77, 13);
-            nomeUsuarioLabel.TabIndex = 8;
+            nomeUsuarioLabel.TabIndex = 0;
             nomeUsuarioLabel.Text = "Nome Usuario:";
             // 
             // senhaLabel
@@ -83,7 +83,7 @@ namespace UIPrincipal
             senhaLabel.Location = new System.Drawing.Point(102, 165);
             senhaLabel.Name = "senhaLabel";
             senhaLabel.Size = new System.Drawing.Size(41, 13);
-            senhaLabel.TabIndex = 10;
+            senhaLabel.TabIndex = 2;
             senhaLabel.Text = "Senha:";
             // 
             // buttonSalvar
@@ -91,7 +91,7 @@ namespace UIPrincipal
             this.buttonSalvar.Location = new System.Drawing.Point(12, 415);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalvar.TabIndex = 0;
+            this.buttonSalvar.TabIndex = 5;
             this.buttonSalvar.Text = "Sal&var";
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
@@ -101,7 +101,7 @@ namespace UIPrincipal
             this.buttonSalvarECadastrarNovo.Location = new System.Drawing.Point(93, 415);
             this.buttonSalvarECadastrarNovo.Name = "buttonSalvarECadastrarNovo";
             this.buttonSalvarECadastrarNovo.Size = new System.Drawing.Size(148, 23);
-            this.buttonSalvarECadastrarNovo.TabIndex = 1;
+            this.buttonSalvarECadastrarNovo.TabIndex = 6;
             this.buttonSalvarECadastrarNovo.Text = "Salvar e cadastrar um &novo";
             this.buttonSalvarECadastrarNovo.UseVisualStyleBackColor = true;
             // 
@@ -111,7 +111,7 @@ namespace UIPrincipal
             this.buttonSair.Location = new System.Drawing.Point(713, 415);
             this.buttonSair.Name = "buttonSair";
             this.buttonSair.Size = new System.Drawing.Size(75, 23);
-            this.buttonSair.TabIndex = 2;
+            this.buttonSair.TabIndex = 7;
             this.buttonSair.Text = "&Sair";
             this.buttonSair.UseVisualStyleBackColor = true;
             this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
@@ -126,7 +126,7 @@ namespace UIPrincipal
             this.ativoCheckBox.Location = new System.Drawing.Point(145, 188);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.ativoCheckBox.TabIndex = 5;
+            this.ativoCheckBox.TabIndex = 4;
             this.ativoCheckBox.Text = "checkBox1";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -144,7 +144,7 @@ namespace UIPrincipal
             this.nomeUsuarioTextBox.Location = new System.Drawing.Point(149, 131);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
             this.nomeUsuarioTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nomeUsuarioTextBox.TabIndex = 9;
+            this.nomeUsuarioTextBox.TabIndex = 1;
             // 
             // senhaTextBox
             // 
@@ -153,7 +153,7 @@ namespace UIPrincipal
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.PasswordChar = '+';
             this.senhaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.senhaTextBox.TabIndex = 11;
+            this.senhaTextBox.TabIndex = 3;
             // 
             // label1
             // 

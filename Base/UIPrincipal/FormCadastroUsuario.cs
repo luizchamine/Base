@@ -11,6 +11,7 @@ namespace UIPrincipal
         {
             InitializeComponent();
             usuarioBindingSource.AddNew();
+
         }
 
         private void FormCadastroUsuario_Load(object sender, EventArgs e)
@@ -30,6 +31,8 @@ namespace UIPrincipal
                 usuarioBindingSource.EndEdit();
                 Inserir();
                 MessageBox.Show("cadastro realizado.");
+                Close();
+
             }
             catch(Exception ex)
             {
@@ -50,6 +53,13 @@ namespace UIPrincipal
             usuarioBLL.Inserir(usuario);
         }
 
-
+        private void buttonSalvarECadastrarNovo_Click(object sender, EventArgs e)
+        {
+            usuarioBindingSource.EndEdit();
+            Inserir();
+            MessageBox.Show("cadastro realizado.");
+            usuarioBindingSource.AddNew();
+            nomeUsuarioTextBox.Focus();
+        }
     }
 }
