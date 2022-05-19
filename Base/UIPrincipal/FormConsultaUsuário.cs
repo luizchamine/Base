@@ -67,5 +67,10 @@ namespace UIPrincipal
                 frm.ShowDialog();
             }
         }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -56,7 +56,7 @@ namespace UIPrincipal
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(696, 100);
+            this.panel1.Size = new System.Drawing.Size(684, 100);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -65,7 +65,7 @@ namespace UIPrincipal
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(696, 100);
+            this.label1.Size = new System.Drawing.Size(684, 100);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Usuários";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,16 +77,21 @@ namespace UIPrincipal
             this.panel2.Controls.Add(this.buttonExcluir);
             this.panel2.Controls.Add(this.buttonAlterar);
             this.panel2.Controls.Add(this.buttonNovo);
-            this.panel2.Location = new System.Drawing.Point(0, 420);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 411);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(696, 50);
+            this.panel2.Size = new System.Drawing.Size(684, 50);
             this.panel2.TabIndex = 1;
             this.panel2.UseWaitCursor = true;
             // 
             // buttonSair
             // 
-            this.buttonSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSair.Location = new System.Drawing.Point(605, 3);
+            this.buttonSair.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.buttonSair.AllowDrop = true;
+            this.buttonSair.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonSair.AutoEllipsis = true;
+            this.buttonSair.AutoSize = true;
+            this.buttonSair.Location = new System.Drawing.Point(593, 3);
             this.buttonSair.Name = "buttonSair";
             this.buttonSair.Size = new System.Drawing.Size(75, 35);
             this.buttonSair.TabIndex = 3;
@@ -97,26 +102,43 @@ namespace UIPrincipal
             // 
             // buttonExcluir
             // 
+            this.buttonExcluir.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.buttonExcluir.AllowDrop = true;
+            this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonExcluir.AutoEllipsis = true;
+            this.buttonExcluir.AutoSize = true;
             this.buttonExcluir.Location = new System.Drawing.Point(174, 3);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(75, 35);
             this.buttonExcluir.TabIndex = 2;
             this.buttonExcluir.Text = "E&xcluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.UseWaitCursor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // buttonAlterar
             // 
+            this.buttonAlterar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.buttonAlterar.AllowDrop = true;
+            this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAlterar.AutoEllipsis = true;
+            this.buttonAlterar.AutoSize = true;
             this.buttonAlterar.Location = new System.Drawing.Point(93, 3);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(75, 35);
             this.buttonAlterar.TabIndex = 1;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.UseWaitCursor = true;
             this.buttonAlterar.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // buttonNovo
             // 
+            this.buttonNovo.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.buttonNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonNovo.AutoEllipsis = true;
+            this.buttonNovo.AutoSize = true;
+            this.buttonNovo.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.buttonNovo.Location = new System.Drawing.Point(12, 3);
             this.buttonNovo.Name = "buttonNovo";
             this.buttonNovo.Size = new System.Drawing.Size(75, 35);
@@ -133,13 +155,13 @@ namespace UIPrincipal
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(12, 98);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(587, 20);
+            this.textBox1.Size = new System.Drawing.Size(575, 20);
             this.textBox1.TabIndex = 2;
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscar.Location = new System.Drawing.Point(605, 98);
+            this.buttonBuscar.Location = new System.Drawing.Point(593, 98);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 20);
             this.buttonBuscar.TabIndex = 3;
@@ -165,7 +187,7 @@ namespace UIPrincipal
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
             this.usuarioDataGridView.Location = new System.Drawing.Point(12, 126);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
-            this.usuarioDataGridView.Size = new System.Drawing.Size(668, 282);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(656, 282);
             this.usuarioDataGridView.TabIndex = 5;
             this.usuarioDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usuarioDataGridView_CellContentClick);
             // 
@@ -191,16 +213,16 @@ namespace UIPrincipal
             // 
             // FormConsultaUsuário
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 461);
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.AllowDrop = true;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "FormConsultaUsuário";
@@ -213,6 +235,7 @@ namespace UIPrincipal
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaUsuário_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -225,7 +248,6 @@ namespace UIPrincipal
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button buttonNovo;
         private System.Windows.Forms.Button buttonAlterar;
         private System.Windows.Forms.Button buttonSair;
         private System.Windows.Forms.Button buttonExcluir;
@@ -236,5 +258,6 @@ namespace UIPrincipal
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Button buttonNovo;
     }
 }
