@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,7 +50,8 @@ namespace UIPrincipal
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-
+            UsuarioBLL usuarioBLL = new UsuarioBLL();
+            usuarioBindingSource.DataSource = usuarioBLL.Buscar(textBoxBuscar.Text);
         }
 
         private void FormConsultaUsuário_KeyDown(object sender, KeyEventArgs e)
@@ -70,7 +72,16 @@ namespace UIPrincipal
 
         private void buttonExcluir_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("tem certeza que deseja excluir este registro?",
+                "atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                return;
 
+            
+            UsuarioBLL usuarioBLL = new UsuarioBLL();
+            int id = Convert.ToInt32(((DataRowView)usuarioBindingSource.Current).Row["id"]);
+            usuarioBLL.Excluir(id);
+            usuarioBindingSource.RemoveCurrent();
+            MessageBox.Show("usuário excluído.");
         }
     }
 }

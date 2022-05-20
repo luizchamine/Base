@@ -37,7 +37,7 @@ namespace UIPrincipal
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonNovo = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
@@ -89,7 +89,6 @@ namespace UIPrincipal
             this.buttonSair.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.buttonSair.AllowDrop = true;
             this.buttonSair.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonSair.AutoEllipsis = true;
             this.buttonSair.AutoSize = true;
             this.buttonSair.Location = new System.Drawing.Point(593, 3);
             this.buttonSair.Name = "buttonSair";
@@ -105,7 +104,6 @@ namespace UIPrincipal
             this.buttonExcluir.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.buttonExcluir.AllowDrop = true;
             this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonExcluir.AutoEllipsis = true;
             this.buttonExcluir.AutoSize = true;
             this.buttonExcluir.Location = new System.Drawing.Point(174, 3);
             this.buttonExcluir.Name = "buttonExcluir";
@@ -121,7 +119,6 @@ namespace UIPrincipal
             this.buttonAlterar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.buttonAlterar.AllowDrop = true;
             this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonAlterar.AutoEllipsis = true;
             this.buttonAlterar.AutoSize = true;
             this.buttonAlterar.Location = new System.Drawing.Point(93, 3);
             this.buttonAlterar.Name = "buttonAlterar";
@@ -136,7 +133,6 @@ namespace UIPrincipal
             // 
             this.buttonNovo.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.buttonNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonNovo.AutoEllipsis = true;
             this.buttonNovo.AutoSize = true;
             this.buttonNovo.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.buttonNovo.Location = new System.Drawing.Point(12, 3);
@@ -148,15 +144,15 @@ namespace UIPrincipal
             this.buttonNovo.UseWaitCursor = true;
             this.buttonNovo.Click += new System.EventHandler(this.buttonNovo_Click);
             // 
-            // textBox1
+            // textBoxBuscar
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBoxBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(575, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBoxBuscar.Location = new System.Drawing.Point(12, 98);
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(575, 20);
+            this.textBoxBuscar.TabIndex = 2;
             // 
             // buttonBuscar
             // 
@@ -219,7 +215,7 @@ namespace UIPrincipal
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.buttonBuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
@@ -251,13 +247,13 @@ namespace UIPrincipal
         private System.Windows.Forms.Button buttonAlterar;
         private System.Windows.Forms.Button buttonSair;
         private System.Windows.Forms.Button buttonExcluir;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxBuscar;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private System.Windows.Forms.DataGridView usuarioDataGridView;
+        private System.Windows.Forms.Button buttonNovo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.Button buttonNovo;
     }
 }
