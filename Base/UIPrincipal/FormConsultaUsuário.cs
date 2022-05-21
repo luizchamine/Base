@@ -35,7 +35,10 @@ namespace UIPrincipal
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
+            using (FormCadastroUsuario frm = new FormCadastroUsuario(usuarioBindingSource))
+            {
+                frm.ShowDialog();
+            }
         }
 
         private void usuarioDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

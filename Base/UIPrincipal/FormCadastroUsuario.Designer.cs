@@ -104,6 +104,7 @@ namespace UIPrincipal
             this.buttonSalvarECadastrarNovo.TabIndex = 6;
             this.buttonSalvarECadastrarNovo.Text = "Salvar e cadastrar um &novo";
             this.buttonSalvarECadastrarNovo.UseVisualStyleBackColor = true;
+            this.buttonSalvarECadastrarNovo.Click += new System.EventHandler(this.buttonSalvarECadastrarNovo_Click);
             // 
             // buttonSair
             // 

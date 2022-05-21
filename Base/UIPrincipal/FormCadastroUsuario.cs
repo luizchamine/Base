@@ -7,11 +7,19 @@ namespace UIPrincipal
 {
     public partial class FormCadastroUsuario : Form
     {
+        private bool inserindoNovo;
+
         public FormCadastroUsuario()
         {
             InitializeComponent();
             usuarioBindingSource.AddNew();
-
+            inserindoNovo = true;
+        }
+        public FormCadastroUsuario(object _current)
+        {
+            InitializeComponent();
+            usuarioBindingSource.DataSource = _current;
+            inserindoNovo = false;
         }
 
         private void FormCadastroUsuario_Load(object sender, EventArgs e)
@@ -51,6 +59,11 @@ namespace UIPrincipal
             usuario.Ativo = ativoCheckBox.Checked;
 
             usuarioBLL.Inserir(usuario);
+            if (inserindoNovo == true)
+                usuarioBLL.Alterar(usuario);
+            else
+                usuarioBLL.Alterar(usuario);
+            
         }
 
         private void buttonSalvarECadastrarNovo_Click(object sender, EventArgs e)
@@ -58,8 +71,11 @@ namespace UIPrincipal
             usuarioBindingSource.EndEdit();
             Inserir();
             MessageBox.Show("cadastro realizado.");
+            usuarioBindingSource.DataSource = typeof(Usuario);
             usuarioBindingSource.AddNew();
+            inserindoNovo = true;
             nomeUsuarioTextBox.Focus();
+
         }
     }
 }
