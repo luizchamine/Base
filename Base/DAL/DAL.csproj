@@ -43,8 +43,16 @@
   <ItemGroup>
     <Compile Include="Banco.cs" />
     <Compile Include="ComandoSQL.cs" />
+    <Compile Include="Conexao.cs" />
     <Compile Include="ParametroSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{a74f233c-de03-4048-97b5-146b938c735f}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
