@@ -42,7 +42,7 @@ namespace UIPrincipal
                 Close();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("erro: " + ex.Message);
             }
@@ -52,18 +52,22 @@ namespace UIPrincipal
         {
             UsuarioBLL usuarioBLL = new UsuarioBLL();
             Usuario usuario = new Usuario();
-            
+
             usuario.Id = Convert.ToInt32(idTextBox.Text);
             usuario.NomeUsuario = nomeUsuarioTextBox.Text;
             usuario.Senha = senhaTextBox.Text;
             usuario.Ativo = ativoCheckBox.Checked;
-
-            usuarioBLL.Inserir(usuario);
-            if (inserindoNovo == true)
-                usuarioBLL.Alterar(usuario);
-            else
-                usuarioBLL.Alterar(usuario);
-            
+            try
+            {
+                if (inserindoNovo == true)
+                    usuarioBLL.Inserir(usuario);
+                else
+                    usuarioBLL.Alterar(usuario);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonSalvarECadastrarNovo_Click(object sender, EventArgs e)

@@ -41,8 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Funcionario.cs" />
     <Compile Include="GrupoUsuario.cs" />
     <Compile Include="Permissao.cs" />
+    <Compile Include="Pessoa.cs" />
+    <Compile Include="Plano.cs" />
+    <Compile Include="StatusOs.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

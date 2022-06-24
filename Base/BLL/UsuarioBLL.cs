@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DAL;
 using System.Data;
+using System;
 
 namespace BLL
 {
@@ -9,6 +10,9 @@ namespace BLL
     {
         public Usuario Inserir(Usuario _usuario)
         {
+            if (_usuario.NomeUsuario.Length == 0)
+                throw new Exception("Informe o nome de usuário.");
+
             UsuarioDAL usuarioDAL = new UsuarioDAL();
             return usuarioDAL.Inserir(_usuario);
         }
